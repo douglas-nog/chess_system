@@ -1,8 +1,10 @@
+import br.com.dognog.boardgame.Board;
 import br.com.dognog.boardgame.Position;
 
 public class Main {
     public static void main(String[] args) {
 
-        Position pos = new Position(3, 5);
+        Board board = new Board(8, 8);
+
     }
 }
