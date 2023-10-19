@@ -1,6 +1,8 @@
 package br.com.dognog.chess;
 
-public class ChessException extends RuntimeException {
+import br.com.dognog.boardgame.BoardException;
+
+public class ChessException extends BoardException {
 
     public ChessException(String message) {
         super(message);
