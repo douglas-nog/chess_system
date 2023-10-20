@@ -2,6 +2,7 @@ package br.com.dognog.chess;
 
 import br.com.dognog.boardgame.Board;
 import br.com.dognog.boardgame.Piece;
+import br.com.dognog.boardgame.Position;
 
 public abstract class ChessPiece extends Piece {
 
@@ -15,4 +16,11 @@ public abstract class ChessPiece extends Piece {
     public Color getColor() {
         return color;
     }
+
+    public boolean isThereOpponentPiece(Position position) {
+        ChessPiece p = (ChessPiece) getBoard().piece(position);
+        return p != null && p.getColor() != color;
+    }
+
+
 }
