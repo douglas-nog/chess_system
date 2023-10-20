@@ -3,7 +3,7 @@ package br.com.dognog.chess;
 import br.com.dognog.boardgame.Board;
 import br.com.dognog.boardgame.Piece;
 
-public class ChessPiece extends Piece {
+public abstract class ChessPiece extends Piece {
 
     private Color color;
 

@@ -3,7 +3,7 @@ package br.com.dognog.boardgame;
 public class Board {
 
     private int rows;
-    private int colmuns;
+    private int columns;
     private Piece[][] pieces;
 
     public Board(int rows, int columns) {
@@ -11,7 +11,7 @@ public class Board {
             throw new BoardException("Error creating board: there must be at least one row and one column");
         }
         this.rows = rows;
-        this.colmuns = columns;
+        this.columns = columns;
         pieces = new Piece[rows][columns];
     }
 
@@ -19,8 +19,8 @@ public class Board {
         return rows;
     }
 
-    public int getColmuns() {
-        return colmuns;
+    public int getColumns() {
+        return columns;
     }
 
     public Piece piece(int row, int colmun) {
@@ -59,7 +59,7 @@ public class Board {
     }
 
     private boolean positionExists(int row, int column) {
-        return row >= 0 && row < rows && column >= 0 && column < colmuns;
+        return row >= 0 && row < rows && column >= 0 && column < columns;
     }
 
     public boolean positionExists(Position position) {
